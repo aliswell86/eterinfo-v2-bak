@@ -1,6 +1,8 @@
 require('dotenv').config();
 
 const Koa = require('koa');
+const serve = require('koa-static');
+const path = require('path');
 const mongoose = require('mongoose');
 
 const app = new Koa();
@@ -17,7 +19,9 @@ mongoose.connect(mongoURI).then(() => {
   console.error(e);
 });
 
-app.set("views", "/home/hosting_users/balkwang/apps/balkwang_eterinfo/views");
+// app.set("views", "/home/hosting_users/balkwang/apps/balkwang_eterinfo/views");
+
+app.use(serve(path.resolve(__dirname, './views/build')));
 
 app.listen(port, () => {
   console.log('listening to port 8002');
