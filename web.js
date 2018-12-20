@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const app = new Koa();
 
 const {
-  PORT: port = 4000, // 값이 존재하지 않는다면 4000을 기본값으로 사용
+  PORT: port = 8002, // 값이 존재하지 않는다면 8002을 기본값으로 사용
   MONGO_URI: mongoURI
 } = process.env;
 
