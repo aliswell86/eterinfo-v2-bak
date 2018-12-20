@@ -7,13 +7,10 @@ const mongoose = require('mongoose');
 
 const app = new Koa();
 
-const {
-  PORT: port = 8002, // 값이 존재하지 않는다면 8002을 기본값으로 사용
-  MONGO_URI: mongoURI
-} = process.env;
+
 
 mongoose.Promise = global.Promise; // Node의 Promise를 사용하도록 설정
-mongoose.connect(mongoURI).then(() => {
+mongoose.connect('mongodb://my_mean:dlskdud1@ds121321.mlab.com:21321/my_mean').then(() => {
   console.log('connected to mongodb');
 }).catch((e) => {
   console.error(e);
