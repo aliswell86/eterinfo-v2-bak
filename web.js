@@ -15,8 +15,8 @@ mongoose.connect('mongodb://my_mean:dlskdud1@ds121321.mlab.com:21321/my_mean').t
 }).catch((e) => {
   console.error(e);
 });
-
-app.set("views", "/home/hosting_users/balkwang/apps/balkwang_eterinfov2/views");
+console.log(__dirname);
+app.set("views", __dirname + 'views');
 
 app.use(serve(path.resolve(__dirname, './views/build')));
 
