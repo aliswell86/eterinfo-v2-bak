@@ -2,7 +2,6 @@ require('dotenv').config();
 
 const Koa = require('koa');
 const serve = require('koa-static');
-const views = require('koa-views');
 const path = require('path');
 const mongoose = require('mongoose');
 const fs = require('fs');
@@ -18,7 +17,6 @@ mongoose.connect('mongodb://my_mean:dlskdud1@ds121321.mlab.com:21321/my_mean').t
   console.error(e);
 });
 
-app.use(views(__dirname + '/views'));
 app.use(serve(path.resolve(__dirname, './views/build')));
 
 app.listen(8002, () => {
