@@ -18,6 +18,6 @@ mongoose.connect('mongodb://my_mean:dlskdud1@ds121321.mlab.com:21321/my_mean').t
 
 app.use(serve(path.resolve(__dirname, './views/build')));
 
-app.listen(port, () => {
+app.listen(8002, () => {
   console.log('listening to port 8002');
 });
