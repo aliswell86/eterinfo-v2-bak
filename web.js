@@ -15,7 +15,7 @@ mongoose.connect('mongodb://my_mean:dlskdud1@ds121321.mlab.com:21321/my_mean').t
 }).catch((e) => {
   console.error(e);
 });
-
+console.log(path.resolve(__dirname, './views/build'));
 app.use(serve(path.resolve(__dirname, './views/build')));
 
 app.listen(8002, () => {
