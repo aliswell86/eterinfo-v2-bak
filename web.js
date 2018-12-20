@@ -19,7 +19,7 @@ mongoose.connect(mongoURI).then(() => {
   console.error(e);
 });
 
-// app.set("views", "/home/hosting_users/balkwang/apps/balkwang_eterinfo/views");
+app.set("views", "/home/hosting_users/balkwang/apps/balkwang_eterinfo/views");
 
 app.use(serve(path.resolve(__dirname, './views/build')));
 
